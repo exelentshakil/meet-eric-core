@@ -13,16 +13,15 @@ closest product is the legiit enterprise command center ($1m arr marketplace wit
 video intro (<5 min): https://youtube.com/shorts/kK3XZd5PNOk
 
 2. ai development:
-i use claude code and cursor as force multipliers, not crutches. i orchestrate agentic workflows with strict schemas, test-driven boundary prompts, and pre-commit hooks. my senior judgment steps in to catch rls leaks, audit generated sql, enforce postgres advisory locks (pg_try_advisory_xact_lock) for webhook idempotency, and guarantee zero prompt injection (securiti certified in nist ai rmf & owasp llm01-10). ai triples my shipping velocity; my systems background guarantees production reliability.
+i use claude code and cursor as force multipliers, not crutches. i orchestrate agentic workflows with strict schemas, test-driven boundary prompts, and pre-commit hooks. my senior judgment steps in to catch rls leaks, audit generated sql, enforce postgres advisory locks (pg_try_advisory_xact_lock) for webhook idempotency, and guarantee zero prompt injection (securiti certified in nist ai rmf and owasp llm01-10). ai triples my shipping velocity; my systems background guarantees production reliability.
 
 3. availability:
-can start immediately today. committed to 25-30 hours/week over the next two weeks to unblock your 30 beta users and lock down stability ahead of the exhibition.
+can start immediately today. i can commit 10 to 15 focused hours/week over the next two weeks ($800 to $1,200/wk at $80/hr). because my daily workflow is anchored in claude code and cursor for rapid generation and verification, these 10 to 15 hours deliver the production output of a 35 to 40 hour manual developer, giving you fast triage for your 30 beta users and exhibition without burning runway. ready to scale hours as we hit milestones on this contract-to-hire track.
 
 which area is your highest priority to tackle first?
-a) broken stripe/hubspot webhooks & rls audit
-b) 8-stage agent loop & slack hitl approvals
-c) oauth token vault & background queues
+a) broken stripe/hubspot webhooks and rls audit
+b) 8-stage agent loop and slack hitl approvals
+c) oauth token vault and background queues
 
-shaq
-founder, barakahsoft
-former lead engineer at legiit | securiti certified ai architect
+best,
+Shaq

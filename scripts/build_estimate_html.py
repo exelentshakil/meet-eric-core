@@ -500,7 +500,7 @@ def build_estimate():
     <div class="meta-card">
       <div><strong>Client:</strong> Paul • Founder, Meet Eric (Swadlincote, UK)</div>
       <div><strong>Engagement:</strong> Senior Full-Stack Product Engineer / Technical Lead</div>
-      <div><strong>Calibrated Rate:</strong> <strong>$45.00/hr USD (20–30 hrs/wk)</strong></div>
+      <div><strong>Calibrated Rate:</strong> <strong>$80.00/hr USD (10–15 hrs/wk Contract-to-Hire)</strong></div>
       <div><strong>Live Prototype:</strong> <span class="live-badge">Verified &amp; Operational</span></div>
     </div>
   </div>
@@ -541,7 +541,7 @@ def build_estimate():
           </td>
           <td style="text-align: center; font-weight: 600;">Week 1</td>
           <td style="text-align: center; font-weight: 700; color: #2563eb;">20%</td>
-          <td style="text-align: right; font-weight: 700;">25 Hrs ($1,125)</td>
+          <td style="text-align: right; font-weight: 700;">10 Hrs ($800)</td>
         </tr>
         <tr>
           <td class="phase-num">Milestone 2</td>
@@ -551,7 +551,7 @@ def build_estimate():
           </td>
           <td style="text-align: center; font-weight: 600;">Week 2</td>
           <td style="text-align: center; font-weight: 700; color: #2563eb;">20%</td>
-          <td style="text-align: right; font-weight: 700;">25 Hrs ($1,125)</td>
+          <td style="text-align: right; font-weight: 700;">10 Hrs ($800)</td>
         </tr>
         <tr>
           <td class="phase-num">Milestone 3</td>
@@ -561,7 +561,7 @@ def build_estimate():
           </td>
           <td style="text-align: center; font-weight: 600;">Week 3</td>
           <td style="text-align: center; font-weight: 700; color: #2563eb;">20%</td>
-          <td style="text-align: right; font-weight: 700;">25 Hrs ($1,125)</td>
+          <td style="text-align: right; font-weight: 700;">10 Hrs ($800)</td>
         </tr>
         <tr>
           <td class="phase-num">Milestone 4</td>
@@ -571,7 +571,7 @@ def build_estimate():
           </td>
           <td style="text-align: center; font-weight: 600;">Week 4</td>
           <td style="text-align: center; font-weight: 700; color: #2563eb;">20%</td>
-          <td style="text-align: right; font-weight: 700;">25 Hrs ($1,125)</td>
+          <td style="text-align: right; font-weight: 700;">10 Hrs ($800)</td>
         </tr>
         <tr>
           <td class="phase-num">Milestone 5</td>
@@ -581,13 +581,13 @@ def build_estimate():
           </td>
           <td style="text-align: center; font-weight: 600;">Week 5</td>
           <td style="text-align: center; font-weight: 700; color: #2563eb;">20%</td>
-          <td style="text-align: right; font-weight: 700;">25 Hrs ($1,125)</td>
+          <td style="text-align: right; font-weight: 700;">10 Hrs ($800)</td>
         </tr>
         <tr class="total-row">
-          <td colspan="2" style="font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">Total Technical Lead Engagement (Staff Augmentation / 20–30 Hrs/Wk)</td>
+          <td colspan="2" style="font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">Technical Lead Engagement (Contract-to-Hire / 10–15 Hrs/Wk Ramp)</td>
           <td style="text-align: center; font-weight: 800;">30 Days</td>
           <td style="text-align: center; font-weight: 800;">100%</td>
-          <td style="text-align: right; font-weight: 800; font-family: ui-monospace, monospace; font-size: 9.8px;">$45.00/hr Capped</td>
+          <td style="text-align: right; font-weight: 800; font-family: ui-monospace, monospace; font-size: 9.8px;">$80.00/hr Retainer</td>
         </tr>
       </tbody>
     </table>
@@ -603,23 +603,23 @@ def build_estimate():
       </div>
       <div class="milestone-item">
         <span class="milestone-name">W1: Broken Integrations, Supabase RLS &amp; Webhook Locks</span>
-        <span class="milestone-val">25 Hrs (Net Day 7)</span>
+        <span class="milestone-val">10 Hrs (Net Day 7)</span>
       </div>
       <div class="milestone-item">
         <span class="milestone-name">W2: AES-256 OAuth Vault &amp; Slack HITL Modals</span>
-        <span class="milestone-val">25 Hrs (Net Day 14)</span>
+        <span class="milestone-val">10 Hrs (Net Day 14)</span>
       </div>
       <div class="milestone-item">
         <span class="milestone-name">W3: 8-Stage Agent Loop &amp; Inngest Durable Queues</span>
-        <span class="milestone-val">25 Hrs (Net Day 21)</span>
+        <span class="milestone-val">10 Hrs (Net Day 21)</span>
       </div>
       <div class="milestone-item">
         <span class="milestone-name">W4: Query Indexing, PgBouncer &amp; CI/CD Pipelines</span>
-        <span class="milestone-val">25 Hrs (Net Day 28)</span>
+        <span class="milestone-val">10 Hrs (Net Day 28)</span>
       </div>
       <div class="milestone-item">
         <span class="milestone-name">W5: Exhibition Capacity, SOC 2/GDPR &amp; Runbooks</span>
-        <span class="milestone-val">25 Hrs (Net Day 35)</span>
+        <span class="milestone-val">10 Hrs (Ongoing/Wk)</span>
       </div>
     </div>
 
@@ -637,8 +637,8 @@ def build_estimate():
   <div class="terms-box">
     <div class="terms-grid">
       <div class="term-col">
-        <div class="term-title">Calibrated Hourly Rate</div>
-        <div class="term-body">$45.00/hr (20–30 hrs/week). Calibrated to client historical hires (e.g. Eddie K at $40/hr) and Upwork average ($50.44/hr).</div>
+        <div class="term-title">Calibrated Rate ($80/hr)</div>
+        <div class="term-body">$80.00/hr (10–15 hrs/week). Matches verified profile list rate; Claude Code/Cursor workflows deliver 35–40 hrs of conventional output.</div>
       </div>
       <div class="term-col">
         <div class="term-title">Exhibition &amp; Beta SLA</div>
