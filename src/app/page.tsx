@@ -38,7 +38,8 @@ export default function HomePage() {
     } else {
       const el = document.getElementById(sectionId);
       if (el) {
-        const headerOffset = 64;
+        const headerEl = document.querySelector('header');
+        const headerOffset = (headerEl ? headerEl.getBoundingClientRect().height : 64) + 12;
         const elementPosition = el.getBoundingClientRect().top;
         const offsetPosition = Math.max(0, elementPosition + window.scrollY - headerOffset);
         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
@@ -95,8 +96,8 @@ export default function HomePage() {
       />
 
       <main className="w-full max-w-full min-w-0 overflow-x-hidden">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 space-y-8">
-          <section id="briefing" className="scroll-mt-20">
+        <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 py-4 sm:py-6 space-y-6 sm:space-y-8">
+          <section id="briefing" className="scroll-mt-28 md:scroll-mt-20">
             <ReviewerTour
               onNavigate={handleNavigate}
               onOpenChaosModal={() => setChaosModalOpen(true)}
@@ -104,37 +105,37 @@ export default function HomePage() {
           </section>
 
           {/* Subsystem Triage: Keep / Harden / Refactor / Replace */}
-          <section id="triage" className="scroll-mt-20">
+          <section id="triage" className="scroll-mt-28 md:scroll-mt-20">
             <SubsystemTriage />
           </section>
 
           {/* 8-Stage Safe Autonomous Agent Execution Loop */}
-          <section id="agent-loop" className="scroll-mt-20">
+          <section id="agent-loop" className="scroll-mt-28 md:scroll-mt-20">
             <AgentExecutionLoop />
           </section>
 
           {/* Integrations & Webhooks Reliability Hub */}
-          <section id="integrations" className="scroll-mt-20">
+          <section id="integrations" className="scroll-mt-28 md:scroll-mt-20">
             <IntegrationHub />
           </section>
 
           {/* Multi-Tenant RLS & Security Matrix */}
-          <section id="security" className="scroll-mt-20">
+          <section id="security" className="scroll-mt-28 md:scroll-mt-20">
             <SecurityMatrix />
           </section>
 
           {/* Micro-Observability & Telemetry */}
-          <section id="telemetry" className="scroll-mt-20">
+          <section id="telemetry" className="scroll-mt-28 md:scroll-mt-20">
             <BentoGrid />
           </section>
 
           {/* Cost & ROI Calculator */}
-          <section id="roi" className="scroll-mt-20">
+          <section id="roi" className="scroll-mt-28 md:scroll-mt-20">
             <RoiCostCalculator />
           </section>
 
           {/* 30-Day Blueprints */}
-          <section id="blueprints" className="scroll-mt-20">
+          <section id="blueprints" className="scroll-mt-28 md:scroll-mt-20">
             <BlueprintExporter />
           </section>
         </div>
