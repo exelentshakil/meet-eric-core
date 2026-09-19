@@ -1,0 +1,126 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+/* ========================================================================= */
+/* SÖHNE & SÖHNE MONO TYPOGRAPHY SUITE (Stripe Standard Enterprise Font)     */
+/* ========================================================================= */
+@font-face {
+  font-family: 'Sohne';
+  src: url('/sohne-font-family/TestSohne-Buch-BF663d89cd32e6a.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sohne';
+  src: url('/sohne-font-family/TestSohne-Kraftig-BF663d89cd37e26.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sohne';
+  src: url('/sohne-font-family/TestSohne-Halbfett-BF663d89cd2d67b.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sohne';
+  src: url('/sohne-font-family/TestSohne-Dreiviertelfett-BF663d89ccc5f66.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sohne';
+  src: url('/sohne-font-family/TestSohne-Fett-BF663d89cca89ff.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sohne Mono';
+  src: url('/sohne-font-family/TestSohneMono-Buch-BF663d89cbcec64.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sohne Mono';
+  src: url('/sohne-font-family/TestSohneMono-Halbfett-BF663d89cc69f9d.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sohne Mono';
+  src: url('/sohne-font-family/TestSohneMono-Fett-BF663d89cc6a8e8.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'Sohne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Sohne Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+body {
+  font-family: 'Sohne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--color-text-primary);
+  background-color: var(--color-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, kbd, samp, pre, .font-mono {
+  font-family: 'Sohne Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+}
+
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-canvas: #f8fafc;
+  --color-surface: #ffffff;
+  --color-panel-subtle: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-border-subtle: #f1f5f9;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94a3b8;
+  --color-accent: #5e6ad2;
+}
+
+.dark {
+  --color-canvas: #0b0d11;
+  --color-surface: #14171f;
+  --color-panel-subtle: #1a1e28;
+  --color-border: #222735;
+  --color-border-subtle: #191d27;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-accent: #7c88eb;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
