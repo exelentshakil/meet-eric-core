@@ -493,14 +493,14 @@ def build_estimate():
   <!-- 1. Executive Header -->
   <div class="header">
     <div class="header-left">
-      <div class="brand-title">BarakahSoft LLC • Technical Leadership &amp; Systems Architecture • Ref #BS-2026-MEET-ERIC</div>
-      <h1>Meet Eric • 30-Day Systems Reliability &amp; Rapid Shipping Blueprint</h1>
-      <p class="subtitle">Supabase Multi-Tenant RLS • 8-Stage Safe Autonomous Agent Loop • Webhook Idempotency • AES-256 OAuth Vault</p>
+      <div class="brand-title">BarakahSoft LLC • Technical Leadership • Ref #BS-2026-ERIC</div>
+      <h1>Meet Eric • Technical Lead 30-Day Shipping Blueprint</h1>
+      <p class="subtitle">Supabase Multi-Tenant RLS • 8-Stage Safe Agent Loop • Webhook Idempotency</p>
     </div>
     <div class="meta-card">
-      <div><strong>Client:</strong> Paul • Founder, Meet Eric (Swadlincote, UK)</div>
-      <div><strong>Engagement:</strong> Senior Full-Stack Product Engineer / Technical Lead</div>
-      <div><strong>Calibrated Rate:</strong> <strong>$80.00/hr USD (10–15 hrs/wk Contract-to-Hire)</strong></div>
+      <div><strong>Client:</strong> Paul • Founder, Meet Eric (UK)</div>
+      <div><strong>Engagement:</strong> Technical Lead ($80.00/hr)</div>
+      <div><strong>Commitment:</strong> 10–15 hrs/wk (Contract-to-Hire)</div>
       <div><strong>Live Prototype:</strong> <span class="live-badge">Verified &amp; Operational</span></div>
     </div>
   </div>
