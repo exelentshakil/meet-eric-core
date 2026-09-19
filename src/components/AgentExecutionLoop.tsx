@@ -174,7 +174,7 @@ export function AgentExecutionLoop() {
               Safe 8-Stage Autonomous Loop
             </span>
           </div>
-          <h2 className="text-lg sm:text-xl font-extrabold tracking-tight text-[var(--color-text-primary)]">
+          <h2 className="text-lg sm:text-xl font-semibold tracking-tight text-[var(--color-text-primary)]">
             Eric 8-Stage Safe Autonomous Execution Runner
           </h2>
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] mt-1 max-w-3xl leading-relaxed">
@@ -212,7 +212,7 @@ export function AgentExecutionLoop() {
           </span>
           {analysisResult && (
             <div className="flex items-center gap-2">
-              <span className="inline-flex items-center gap-1 text-[11px] font-mono px-2 py-0.5 rounded-md bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 font-semibold">
+              <span className="inline-flex items-center gap-1 text-xs font-mono px-2 py-0.5 rounded-md bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 font-semibold">
                 <Sparkles className="h-3 w-3 text-emerald-400" />
                 {analysisResult.provider} ({analysisResult.model}) • {analysisResult.latencyMs}ms
               </span>
@@ -239,14 +239,14 @@ export function AgentExecutionLoop() {
                     : 'border-[var(--color-border)] bg-[var(--color-panel-subtle)]/60 hover:bg-[var(--color-surface)]'
                 }`}
               >
-                <div className="flex items-center justify-between text-[11px] font-mono mb-1">
+                <div className="flex items-center justify-between text-xs font-mono mb-1">
                   <span className="text-[var(--color-text-muted)]">[{sc.source}]</span>
                   {isSelected && <span className="text-emerald-600 dark:text-emerald-400 font-bold">Active</span>}
                 </div>
                 <div className="text-xs font-bold text-[var(--color-text-primary)] truncate">
                   {sc.title}
                 </div>
-                <div className="text-[11px] text-[var(--color-text-secondary)] mt-1 truncate">
+                <div className="text-xs text-[var(--color-text-secondary)] mt-1 truncate">
                   {sc.desc}
                 </div>
               </button>
@@ -289,7 +289,7 @@ export function AgentExecutionLoop() {
                 }`}
               >
                 <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-[10px] font-mono font-bold">
+                  <span className="text-xs font-mono font-bold">
                     0{stage.num}
                   </span>
                   {isPast ? (
@@ -300,7 +300,7 @@ export function AgentExecutionLoop() {
                     <Icon className="h-3 w-3 opacity-40" />
                   )}
                 </div>
-                <div className="font-bold text-[11px] leading-tight">
+                <div className="font-bold text-xs leading-tight">
                   {stage.label}
                 </div>
               </div>
@@ -315,25 +315,25 @@ export function AgentExecutionLoop() {
           {/* Stage 1 & 2: Investigation & Root Cause Output */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-1.5">
-              <div className="text-[11px] font-mono font-bold uppercase text-[var(--color-text-muted)]">
+              <div className="text-xs font-mono font-bold uppercase text-[var(--color-text-muted)]">
                 Stage 1 • Telemetry Ingestion [{activeScenario.source}]
               </div>
               <div className="rounded-lg p-3 bg-[var(--color-surface)] border border-[var(--color-border)] text-xs font-mono">
                 <div>Baseline: <span className="text-emerald-600 dark:text-emerald-400 font-semibold">{activeScenario.baseline}</span></div>
                 <div>Current: <span className="text-red-600 dark:text-red-400 font-semibold">{activeScenario.current}</span></div>
-                <div className="mt-1 text-[11px] text-[var(--color-text-secondary)]">Context: {JSON.stringify(activeScenario.context)}</div>
+                <div className="mt-1 text-xs text-[var(--color-text-secondary)]">Context: {JSON.stringify(activeScenario.context)}</div>
               </div>
             </div>
 
             <div className="space-y-1.5">
-              <div className="text-[11px] font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400">
+              <div className="text-xs font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400">
                 Stage 2 • AI Root-Cause Investigation
               </div>
               <div className="rounded-lg p-3 bg-[var(--color-surface)] border border-[var(--color-border)] text-xs leading-relaxed">
                 {analysisResult ? (
                   <>
                     <p className="font-semibold text-[var(--color-text-primary)]">{analysisResult.rootCause}</p>
-                    <div className="mt-2 text-[11px] font-mono text-red-600 dark:text-red-400">
+                    <div className="mt-2 text-xs font-mono text-red-600 dark:text-red-400">
                       Impact: {analysisResult.metricsImpact}
                     </div>
                   </>
@@ -351,26 +351,26 @@ export function AgentExecutionLoop() {
           {currentStage >= 3 && analysisResult && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-3 border-t border-[var(--color-border)]">
               <div className="space-y-1.5">
-                <div className="text-[11px] font-mono font-bold uppercase text-blue-600 dark:text-blue-400">
+                <div className="text-xs font-mono font-bold uppercase text-blue-600 dark:text-blue-400">
                   Stage 3 • Chosen Tool
                 </div>
                 <div className="rounded-lg p-3 bg-[var(--color-surface)] border border-[var(--color-border)] text-xs font-mono">
                   <div className="font-bold text-[var(--color-text-primary)]">{analysisResult.recommendedTool}()</div>
-                  <div className="text-[11px] text-[var(--color-text-secondary)] mt-1">
+                  <div className="text-xs text-[var(--color-text-secondary)] mt-1">
                     Params: {JSON.stringify(analysisResult.toolParameters)}
                   </div>
                 </div>
               </div>
 
               <div className="space-y-1.5">
-                <div className="text-[11px] font-mono font-bold uppercase text-purple-600 dark:text-purple-400">
+                <div className="text-xs font-mono font-bold uppercase text-purple-600 dark:text-purple-400">
                   Stage 4 • RBAC Scope &amp; Permission Check
                 </div>
                 <div className="rounded-lg p-3 bg-[var(--color-surface)] border border-[var(--color-border)] text-xs font-mono">
                   <div className="text-emerald-600 dark:text-emerald-400 font-semibold">
                     ✓ Permissions Validated: {analysisResult.requiredPermissions.join(', ')}
                   </div>
-                  <div className="text-[11px] text-[var(--color-text-muted)] mt-1">
+                  <div className="text-xs text-[var(--color-text-muted)] mt-1">
                     Tenant RLS: app.current_org_id() = org_beta_live
                   </div>
                 </div>
@@ -381,7 +381,7 @@ export function AgentExecutionLoop() {
           {/* Stage 5: Human-in-the-Loop Slack Card Simulator */}
           {currentStage >= 5 && analysisResult && (
             <div className="pt-3 border-t border-[var(--color-border)]">
-              <div className="text-[11px] font-mono font-bold uppercase text-amber-600 dark:text-amber-400 mb-2">
+              <div className="text-xs font-mono font-bold uppercase text-amber-600 dark:text-amber-400 mb-2">
                 Stage 5 • Slack Human-in-the-Loop Approval Checkpoint
               </div>
 
@@ -393,10 +393,10 @@ export function AgentExecutionLoop() {
                     </div>
                     <div>
                       <span className="font-bold text-xs text-[var(--color-text-primary)]">Eric (AI Head of Growth)</span>
-                      <span className="text-[10px] font-mono text-[var(--color-text-muted)] ml-2">#growth-approvals • today at 14:02</span>
+                      <span className="text-xs font-mono text-[var(--color-text-muted)] ml-2">#growth-approvals • today at 14:02</span>
                     </div>
                   </div>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-amber-100 dark:bg-amber-900/60 text-amber-900 dark:text-amber-300 font-semibold">
+                  <span className="text-xs font-mono px-2 py-0.5 rounded-md bg-amber-100 dark:bg-amber-900/60 text-amber-900 dark:text-amber-300 font-semibold">
                     AWAITING HUMAN CONFIRMATION
                   </span>
                 </div>
@@ -405,7 +405,7 @@ export function AgentExecutionLoop() {
                   {analysisResult.approvalSummary}
                 </p>
 
-                <div className="rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] p-2.5 text-[11px] font-mono text-[var(--color-text-secondary)]">
+                <div className="rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] p-2.5 text-xs font-mono text-[var(--color-text-secondary)]">
                   Execution Payload: {JSON.stringify(analysisResult.executionPayload)}
                 </div>
 
@@ -445,37 +445,37 @@ export function AgentExecutionLoop() {
           {currentStage >= 6 && analysisResult && (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-3 border-t border-[var(--color-border)]">
               <div className="rounded-lg p-3 bg-[var(--color-surface)] border border-[var(--color-border)]">
-                <div className="text-[10px] font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400 mb-1">
+                <div className="text-xs font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400 mb-1">
                   Stage 6 • Executed API Action
                 </div>
                 <div className="text-xs font-mono text-[var(--color-text-primary)]">
                   Status: <span className="text-emerald-600 dark:text-emerald-400 font-bold">200 OK</span>
                 </div>
-                <div className="text-[10px] font-mono text-[var(--color-text-muted)] mt-1 truncate">
+                <div className="text-xs font-mono text-[var(--color-text-muted)] mt-1 truncate">
                   Key: {analysisResult.executionPayload.idempotencyKey}
                 </div>
               </div>
 
               <div className="rounded-lg p-3 bg-[var(--color-surface)] border border-[var(--color-border)]">
-                <div className="text-[10px] font-mono font-bold uppercase text-blue-600 dark:text-blue-400 mb-1">
+                <div className="text-xs font-mono font-bold uppercase text-blue-600 dark:text-blue-400 mb-1">
                   Stage 7 • Telemetry Verification
                 </div>
                 <div className="text-xs text-[var(--color-text-primary)]">
                   {analysisResult.verificationCriteria}
                 </div>
-                <div className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 mt-1">
+                <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 mt-1">
                   ✓ Receipt confirmed in 84ms
                 </div>
               </div>
 
               <div className="rounded-lg p-3 bg-[var(--color-surface)] border border-[var(--color-border)]">
-                <div className="text-[10px] font-mono font-bold uppercase text-purple-600 dark:text-purple-400 mb-1">
+                <div className="text-xs font-mono font-bold uppercase text-purple-600 dark:text-purple-400 mb-1">
                   Stage 8 • Cryptographic Audit Log
                 </div>
-                <div className="text-[11px] font-mono text-[var(--color-text-primary)] truncate">
+                <div className="text-xs font-mono text-[var(--color-text-primary)] truncate">
                   Hash: {analysisResult.auditTrailHash}
                 </div>
-                <div className="text-[10px] font-mono text-[var(--color-text-muted)] mt-1">
+                <div className="text-xs font-mono text-[var(--color-text-muted)] mt-1">
                   Immutable record written to Supabase `audit_ledger`
                 </div>
               </div>

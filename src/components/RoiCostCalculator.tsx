@@ -96,7 +96,7 @@ export function RoiCostCalculator() {
                 onChange={(e) => setBetaClients(Number(e.target.value))}
                 className="w-full accent-blue-600 h-1.5 bg-[var(--color-panel-subtle)] rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-[var(--color-text-muted)] font-mono">
+              <div className="flex justify-between text-xs text-[var(--color-text-muted)] font-mono">
                 <span>30 (Current Beta)</span>
                 <span>75</span>
                 <span>150 (Post-Exhibition)</span>
@@ -122,7 +122,7 @@ export function RoiCostCalculator() {
                 onChange={(e) => setMonthlyEventsPerClient(Number(e.target.value))}
                 className="w-full accent-blue-600 h-1.5 bg-[var(--color-panel-subtle)] rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-[var(--color-text-muted)] font-mono">
+              <div className="flex justify-between text-xs text-[var(--color-text-muted)] font-mono">
                 <span>2k/mo</span>
                 <span>25k/mo</span>
                 <span>50k/mo</span>
@@ -148,7 +148,7 @@ export function RoiCostCalculator() {
                 onChange={(e) => setAvgClientArr(Number(e.target.value))}
                 className="w-full accent-blue-600 h-1.5 bg-[var(--color-panel-subtle)] rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-[var(--color-text-muted)] font-mono">
+              <div className="flex justify-between text-xs text-[var(--color-text-muted)] font-mono">
                 <span>$1k</span>
                 <span>$7.5k</span>
                 <span>$15k</span>
@@ -174,7 +174,7 @@ export function RoiCostCalculator() {
                 onChange={(e) => setChurnReductionPercent(Number(e.target.value))}
                 className="w-full accent-emerald-600 h-1.5 bg-[var(--color-panel-subtle)] rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-[var(--color-text-muted)] font-mono">
+              <div className="flex justify-between text-xs text-[var(--color-text-muted)] font-mono">
                 <span>5%</span>
                 <span>18% (Baseline)</span>
                 <span>40%</span>
@@ -184,7 +184,7 @@ export function RoiCostCalculator() {
 
           {/* Infrastructure Breakdown Card */}
           <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-panel-subtle)] p-3 space-y-2 text-xs font-mono">
-            <div className="text-[11px] font-bold text-[var(--color-text-primary)] uppercase">
+            <div className="text-xs font-bold text-[var(--color-text-primary)] uppercase">
               Itemized Infrastructure Micro-Costs:
             </div>
             <div className="flex justify-between text-[var(--color-text-secondary)]">
@@ -209,7 +209,7 @@ export function RoiCostCalculator() {
               <span className="text-xs font-mono font-bold uppercase text-blue-700 dark:text-blue-400">
                 Projected Business Impact
               </span>
-              <span className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-300 font-semibold">
+              <span className="text-xs font-mono px-2 py-0.5 rounded-md bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-300 font-semibold">
                 ROI: {Math.round((preservedMonthlyRevenue / (totalMonthlyCost || 1)) * 100)}%
               </span>
             </div>
@@ -219,18 +219,18 @@ export function RoiCostCalculator() {
                 <span className="text-xs text-[var(--color-text-muted)] font-mono block">
                   Preserved Monthly Revenue (Net Churn Averted)
                 </span>
-                <span className="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 font-mono">
+                <span className="text-2xl sm:text-3xl font-semibold text-emerald-600 dark:text-emerald-400 font-mono">
                   +${preservedMonthlyRevenue.toLocaleString()}/mo
                 </span>
               </div>
 
               <div className="grid grid-cols-2 gap-3 pt-2 border-t border-[var(--color-border-subtle)] text-xs font-mono">
                 <div>
-                  <span className="text-[var(--color-text-muted)] text-[11px] block">Monitored MRR</span>
+                  <span className="text-[var(--color-text-muted)] text-xs block">Monitored MRR</span>
                   <span className="font-bold text-[var(--color-text-primary)]">${totalMonitoredArr.toLocaleString()}/mo</span>
                 </div>
                 <div>
-                  <span className="text-[var(--color-text-muted)] text-[11px] block">Annualized Impact</span>
+                  <span className="text-[var(--color-text-muted)] text-xs block">Annualized Impact</span>
                   <span className="font-bold text-emerald-600 dark:text-emerald-400">+${Number(annualPreservedValue).toLocaleString()}/yr</span>
                 </div>
               </div>
@@ -241,7 +241,7 @@ export function RoiCostCalculator() {
             </p>
           </div>
 
-          <div className="pt-2 text-[11px] font-mono text-[var(--color-text-muted)] flex items-center gap-1.5">
+          <div className="pt-2 text-xs font-mono text-[var(--color-text-muted)] flex items-center gap-1.5">
             <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
             <span>Exhibition &amp; Multi-Tenant Capacity Confirmed</span>
           </div>

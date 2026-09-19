@@ -97,7 +97,7 @@ export function SecurityMatrix() {
               NIST AI RMF 100-1 • OWASP LLM01-LLM10
             </span>
           </div>
-          <h2 className="text-lg sm:text-xl font-extrabold tracking-tight text-[var(--color-text-primary)]">
+          <h2 className="text-lg sm:text-xl font-semibold tracking-tight text-[var(--color-text-primary)]">
             Supabase Multi-Tenant RLS &amp; AI Tool Security Matrix
           </h2>
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] mt-1 max-w-3xl leading-relaxed">
@@ -126,14 +126,14 @@ export function SecurityMatrix() {
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)]">
                   <Icon className="h-4 w-4 text-[var(--color-text-primary)]" />
                 </div>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 font-bold">
+                <span className="text-xs font-mono px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 font-bold">
                   {p.status}
                 </span>
               </div>
               <div className="font-bold text-xs text-[var(--color-text-primary)]">
                 {p.title}
               </div>
-              <p className="text-[11px] text-[var(--color-text-secondary)] leading-relaxed">
+              <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
                 {p.desc}
               </p>
             </div>
@@ -152,7 +152,7 @@ export function SecurityMatrix() {
               Prove Eric cannot be tricked into data leakage or unauthorized refunds
             </span>
           </div>
-          <div className="text-[11px] font-mono text-purple-600 dark:text-purple-400 font-semibold">
+          <div className="text-xs font-mono text-purple-600 dark:text-purple-400 font-semibold">
             Certified Defense Protocol Active
           </div>
         </div>
@@ -212,26 +212,26 @@ export function SecurityMatrix() {
                 <CheckCircle2 className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
                 <span>Attack Successfully Defeated: {attackLog.title}</span>
               </div>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 font-semibold">
+              <span className="text-xs font-mono px-2 py-0.5 rounded-md bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 font-semibold">
                 Intercepted in {attackLog.latencyMs}ms
               </span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 pt-1">
               <div className="p-2.5 rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)]">
-                <div className="text-[10px] font-mono font-bold uppercase text-red-600 dark:text-red-400 mb-1">
+                <div className="text-xs font-mono font-bold uppercase text-red-600 dark:text-red-400 mb-1">
                   Adversarial Exploit Payload
                 </div>
-                <div className="font-mono text-[11px] text-red-900 dark:text-red-300 break-all">
+                <div className="font-mono text-xs text-red-900 dark:text-red-300 break-all">
                   {attackLog.payload}
                 </div>
               </div>
 
               <div className="p-2.5 rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)]">
-                <div className="text-[10px] font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400 mb-1">
+                <div className="text-xs font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400 mb-1">
                   Active Enforcement Shield [{attackLog.interceptedBy}]
                 </div>
-                <div className="text-[11px] text-[var(--color-text-primary)] leading-relaxed">
+                <div className="text-xs text-[var(--color-text-primary)] leading-relaxed">
                   {attackLog.defense}
                 </div>
               </div>

@@ -32,14 +32,14 @@ export function Footer() {
             <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-panel-subtle)] p-4 flex flex-col justify-between flex-1 space-y-3.5 text-xs">
               <div className="space-y-3">
                 <div className="flex items-center gap-2.5">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white font-black text-sm shadow-xs shrink-0">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white font-bold text-sm shadow-xs shrink-0">
                     E
                   </div>
                   <div className="flex items-center gap-2 min-w-0 flex-wrap">
-                    <span className="text-base font-extrabold tracking-tight text-[var(--color-text-primary)] whitespace-nowrap">
+                    <span className="text-base font-semibold tracking-tight text-[var(--color-text-primary)] whitespace-nowrap">
                       Meet Eric
                     </span>
-                    <span className="rounded-full bg-blue-100 dark:bg-blue-950 px-2 py-0.5 text-[10px] font-mono font-bold text-blue-800 dark:text-blue-300 border border-blue-300 dark:border-blue-800 whitespace-nowrap shrink-0">
+                    <span className="rounded-full bg-blue-100 dark:bg-blue-950 px-2 py-0.5 text-xs font-mono font-bold text-blue-800 dark:text-blue-300 border border-blue-300 dark:border-blue-800 whitespace-nowrap shrink-0">
                       v2.4 Production Engine
                     </span>
                   </div>
@@ -53,9 +53,9 @@ export function Footer() {
               <div className="pt-2.5 border-t border-[var(--color-border)] flex items-center justify-between gap-2 text-xs font-mono">
                 <div className="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 font-medium whitespace-nowrap min-w-0">
                   <span className="h-2 w-2 rounded-full bg-blue-500 animate-pulse shrink-0"></span>
-                  <span className="text-[11px] font-semibold truncate">Target SLA: 99.99%</span>
+                  <span className="text-xs font-semibold truncate">Target SLA: 99.99%</span>
                 </div>
-                <span className="inline-flex items-center rounded-md bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 text-[10px] font-mono font-semibold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 whitespace-nowrap shrink-0">
+                <span className="inline-flex items-center rounded-md bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 text-xs font-mono font-semibold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 whitespace-nowrap shrink-0">
                   30 Beta Clients Ready
                 </span>
               </div>
@@ -69,7 +69,7 @@ export function Footer() {
             </h4>
             <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-panel-subtle)] p-4 flex flex-col justify-between flex-1 space-y-3.5 text-xs">
               <div className="space-y-2">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-2 text-[11px] font-mono text-[var(--color-text-secondary)]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-2 text-xs font-mono text-[var(--color-text-secondary)]">
                   <div className="flex items-center gap-1.5 rounded-md bg-[var(--color-surface)] border border-[var(--color-border-subtle)] px-2.5 py-1.5 shadow-2xs">
                     <Database className="h-3.5 w-3.5 text-blue-500 shrink-0" />
                     <span className="truncate">Supabase Multi-Tenant</span>
@@ -99,10 +99,10 @@ export function Footer() {
 
               {/* Compliance & SLA Verification Strip */}
               <div className="pt-2.5 border-t border-[var(--color-border)] flex items-center justify-between gap-2 text-xs font-mono">
-                <span className="text-[11px] text-[var(--color-text-muted)] font-medium truncate">
+                <span className="text-xs text-[var(--color-text-muted)] font-medium truncate">
                   NIST AI RMF 100-1 &amp; OWASP LLM01-10
                 </span>
-                <span className="inline-flex items-center gap-1 rounded-md bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 text-[10px] font-bold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 whitespace-nowrap shrink-0">
+                <span className="inline-flex items-center gap-1 rounded-md bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 text-xs font-bold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 whitespace-nowrap shrink-0">
                   Kernel RLS Active
                 </span>
               </div>
@@ -130,11 +130,11 @@ export function Footer() {
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-1.5 font-bold text-[var(--color-text-primary)] text-sm">
                       <span className="truncate">Shakil Ahmed</span>
-                      <span className="inline-flex items-center rounded bg-blue-50 dark:bg-blue-950/60 px-1.5 py-0.2 text-[10px] font-mono font-semibold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 whitespace-nowrap shrink-0">
+                      <span className="inline-flex items-center rounded bg-blue-50 dark:bg-blue-950/60 px-1.5 py-0.2 text-xs font-mono font-semibold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 whitespace-nowrap shrink-0">
                         Lead
                       </span>
                     </div>
-                    <p className="text-[11px] text-[var(--color-text-muted)] font-mono truncate">
+                    <p className="text-xs text-[var(--color-text-muted)] font-mono truncate">
                       Principal Systems Architect &amp; Founder
                     </p>
                   </div>
@@ -148,9 +148,9 @@ export function Footer() {
               <div className="pt-2.5 border-t border-[var(--color-border)] flex items-center justify-between gap-1.5 text-xs font-mono">
                 <div className="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 font-medium min-w-0">
                   <CheckCircle2 className="h-3.5 w-3.5 text-blue-500 shrink-0" />
-                  <span className="whitespace-nowrap shrink-0 text-[11px] font-semibold">Securiti Certified (Cert ID: 14B411BCE)</span>
+                  <span className="whitespace-nowrap shrink-0 text-xs font-semibold">Securiti Certified (Cert ID: 14B411BCE)</span>
                 </div>
-                <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 text-[10px] font-bold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 whitespace-nowrap shrink-0">
+                <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 text-xs font-bold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 whitespace-nowrap shrink-0">
                   <ShieldCheck className="h-3 w-3 text-blue-600 dark:text-blue-400" />
                   <span>Verified</span>
                 </span>

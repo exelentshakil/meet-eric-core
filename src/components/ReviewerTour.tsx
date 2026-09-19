@@ -68,11 +68,11 @@ export function ReviewerTour({ onNavigate, onOpenChaosModal }: ReviewerTourProps
               <Sparkles className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
               Executive Architecture Briefing for Paul &amp; The Meet Eric Team
             </span>
-            <span className="text-xs text-[var(--color-text-muted)] font-mono font-medium hidden sm:inline">
+            <span className="text-xs text-[var(--color-text-secondary)] font-mono font-medium hidden sm:inline">
               30 Beta Users • Exhibition Ready
             </span>
           </div>
-          <h2 className="text-lg sm:text-xl font-extrabold tracking-tight text-[var(--color-text-primary)]">
+          <h2 className="text-lg sm:text-xl font-semibold tracking-tight text-[var(--color-text-primary)]">
             How to Evaluate This Production Systems Architecture Cockpit
           </h2>
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] mt-1 max-w-4xl leading-relaxed">
@@ -112,7 +112,7 @@ export function ReviewerTour({ onNavigate, onOpenChaosModal }: ReviewerTourProps
               return (
                 <div
                   key={path.id}
-                  className="group relative flex flex-col justify-between rounded-xl border border-[var(--color-border)] bg-[var(--color-panel-subtle)] p-4 transition-all hover:border-slate-400 hover:bg-[var(--color-surface)] shadow-xs hover:shadow-card"
+                  className="group relative flex flex-col justify-between rounded-xl border border-[var(--color-border)] bg-[var(--color-panel-subtle)] p-4 transition-all hover:border-slate-400 hover:bg-[var(--color-surface)] shadow-xs hover:shadow-sm"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-2.5">
@@ -121,7 +121,7 @@ export function ReviewerTour({ onNavigate, onOpenChaosModal }: ReviewerTourProps
                       </span>
                       <Icon className="h-4 w-4 text-[var(--color-text-muted)] group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
                     </div>
-                    <h3 className="text-sm font-bold text-[var(--color-text-primary)] mb-1.5">
+                    <h3 className="text-sm font-semibold text-[var(--color-text-primary)] mb-1.5">
                       {path.title}
                     </h3>
                     <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
@@ -144,12 +144,12 @@ export function ReviewerTour({ onNavigate, onOpenChaosModal }: ReviewerTourProps
           </div>
 
           {/* High-Contrast Command Console Summary Strip */}
-          <div className="rounded-xl bg-slate-950 text-white p-3.5 sm:p-4 shadow-card border border-slate-800 space-y-3 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:gap-4">
+          <div className="rounded-xl bg-slate-950 text-white p-3.5 sm:p-4 shadow-sm border border-slate-800 space-y-3 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:gap-4">
             <div className="sm:hidden flex items-center gap-2.5">
               <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400 border border-blue-500/30 shadow-xs">
                 <ShieldCheck className="h-4 w-4" />
               </div>
-              <span className="font-mono font-bold text-blue-300 uppercase tracking-wider text-[11px] whitespace-nowrap shrink-0">
+              <span className="font-mono font-semibold text-blue-300 uppercase tracking-wider text-xs whitespace-nowrap shrink-0">
                 Technical Lead Guarantees
               </span>
             </div>
@@ -160,22 +160,22 @@ export function ReviewerTour({ onNavigate, onOpenChaosModal }: ReviewerTourProps
                   <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400 border border-blue-500/30 shadow-xs">
                     <ShieldCheck className="h-4.5 w-4.5" />
                   </div>
-                  <span className="font-mono font-bold text-blue-300 uppercase tracking-wider text-[11px] whitespace-nowrap shrink-0">
+                  <span className="font-mono font-semibold text-blue-300 uppercase tracking-wider text-xs whitespace-nowrap shrink-0">
                     Lead Standards
                   </span>
                 </div>
 
                 <div className="flex flex-col sm:flex-row sm:flex-wrap gap-1.5 text-xs">
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-slate-900 border border-slate-800 text-slate-200 text-[10px] sm:text-[11px] font-mono whitespace-nowrap w-fit">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-slate-900 border border-slate-800 text-slate-200 text-xs font-mono whitespace-nowrap w-fit">
                     No Purity Rewrites
                   </span>
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-slate-900 border border-slate-800 text-slate-200 text-[10px] sm:text-[11px] font-mono whitespace-nowrap w-fit">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-slate-900 border border-slate-800 text-slate-200 text-xs font-mono whitespace-nowrap w-fit">
                     Fast Modular PRs
                   </span>
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-slate-900 border border-slate-800 text-slate-200 text-[10px] sm:text-[11px] font-mono whitespace-nowrap w-fit">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-slate-900 border border-slate-800 text-slate-200 text-xs font-mono whitespace-nowrap w-fit">
                     Multi-Tenant RLS Safe
                   </span>
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-blue-950/40 border border-blue-800/50 text-blue-300 text-[10px] sm:text-[11px] font-mono font-semibold whitespace-nowrap w-fit">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-blue-950/40 border border-blue-800/50 text-blue-300 text-xs font-mono font-semibold whitespace-nowrap w-fit">
                     30 Beta Ready
                   </span>
                 </div>
@@ -190,14 +190,11 @@ export function ReviewerTour({ onNavigate, onOpenChaosModal }: ReviewerTourProps
                   </span>
                 </div>
                 <div className="space-y-0.5 sm:space-y-0 sm:text-left flex flex-col justify-center">
-                  <div className="text-[10px] sm:text-[9px] font-mono font-bold text-blue-400 uppercase tracking-wider leading-none">
+                  <div className="text-xs font-mono font-semibold text-blue-400 uppercase tracking-wider leading-none">
                     Target SLA
                   </div>
-                  <div className="text-xs sm:text-[11px] font-mono font-extrabold text-white leading-tight">
+                  <div className="text-xs font-mono font-semibold text-white leading-tight">
                     99.99%
-                  </div>
-                  <div className="text-[9px] font-mono text-blue-300/80 leading-none sm:hidden">
-                    Exhibition Ready
                   </div>
                 </div>
               </div>

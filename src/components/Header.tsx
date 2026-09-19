@@ -82,7 +82,7 @@ export function Header({
               <span className="text-sm font-bold tracking-tight text-[var(--color-text-primary)]">
                 Meet Eric
               </span>
-              <span className="text-[11px] font-semibold px-1.5 py-0.5 rounded-md bg-blue-50 dark:bg-blue-950/40 text-blue-800 dark:text-blue-300 border border-blue-200 dark:border-blue-800 font-mono">
+              <span className="text-xs font-semibold px-1.5 py-0.5 rounded-md bg-blue-50 dark:bg-blue-950/40 text-blue-800 dark:text-blue-300 border border-blue-200 dark:border-blue-800 font-mono">
                 AI Head of Growth
               </span>
             </div>
@@ -165,7 +165,7 @@ export function Header({
           >
             <Search className="h-3.5 w-3.5 text-[var(--color-text-muted)] shrink-0" />
             <span className="font-medium whitespace-nowrap">Quick</span>
-            <kbd className="rounded border border-[var(--color-border)] bg-[var(--color-surface)] px-1.5 py-0.5 text-[10px] font-mono font-semibold text-[var(--color-text-muted)] shrink-0">
+            <kbd className="rounded border border-[var(--color-border)] bg-[var(--color-surface)] px-1.5 py-0.5 text-xs font-mono font-semibold text-[var(--color-text-muted)] shrink-0">
               ⌘K
             </kbd>
           </button>
@@ -195,7 +195,7 @@ export function Header({
                 <Zap className="h-3.5 w-3.5 text-amber-500 shrink-0" />
                 <div>
                   <div className="font-medium">Chaos Simulator</div>
-                  <div className="text-[10px] text-[var(--color-text-muted)]">Test network timeout &amp; 3DS failover</div>
+                  <div className="text-xs text-[var(--color-text-muted)]">Test network timeout &amp; 3DS failover</div>
                 </div>
               </DropdownMenuItem>
 
@@ -206,7 +206,7 @@ export function Header({
                 <ShieldCheck className="h-3.5 w-3.5 text-purple-500 shrink-0" />
                 <div>
                   <div className="font-medium">AI Governance &amp; RLS</div>
-                  <div className="text-[10px] text-[var(--color-text-muted)]">NIST AI RMF &amp; OWASP LLM01-10</div>
+                  <div className="text-xs text-[var(--color-text-muted)]">NIST AI RMF &amp; OWASP LLM01-10</div>
                 </div>
               </DropdownMenuItem>
 
@@ -219,7 +219,7 @@ export function Header({
                 <Terminal className="h-3.5 w-3.5 text-blue-500 shrink-0" />
                 <div>
                   <div className="font-medium">Live Telemetry Logs</div>
-                  <div className="text-[10px] text-[var(--color-text-muted)]">HTTP traces &amp; webhook events</div>
+                  <div className="text-xs text-[var(--color-text-muted)]">HTTP traces &amp; webhook events</div>
                 </div>
               </DropdownMenuItem>
             </DropdownMenuContent>

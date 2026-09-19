@@ -216,7 +216,7 @@ export function BentoGrid() {
             )}
           </div>
 
-          <div className="mt-2 pt-2 border-t border-[var(--color-border)] flex items-center justify-between text-[11px] font-mono text-[var(--color-text-muted)]">
+          <div className="mt-2 pt-2 border-t border-[var(--color-border)] flex items-center justify-between text-xs font-mono text-[var(--color-text-muted)]">
             <span>Buffer: Redis 7</span>
             <span>Workers: 16 Celery</span>
             <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Lag: 0ms</span>
@@ -273,7 +273,7 @@ export function BentoGrid() {
                           <div className="flex items-center gap-2 font-mono text-xs">
                             <span className="font-bold">{item.payload.method}:</span>
                             <span className="text-emerald-500 font-semibold">{item.payload.display}</span>
-                            <span className="text-slate-400 text-[10px]">({item.payload.sub})</span>
+                            <span className="text-[var(--color-text-secondary)] text-xs">({item.payload.sub})</span>
                           </div>
                         )}
                       />
@@ -291,7 +291,7 @@ export function BentoGrid() {
             )}
           </div>
 
-          <div className="mt-2 pt-2 border-t border-[var(--color-border)] flex items-center justify-between text-[11px] font-mono text-[var(--color-text-muted)]">
+          <div className="mt-2 pt-2 border-t border-[var(--color-border)] flex items-center justify-between text-xs font-mono text-[var(--color-text-muted)]">
             <span>Disk I/O: 14.2k ➔ 0</span>
             <span className="text-emerald-600 dark:text-emerald-400 font-semibold">B-Tree Hot Hit</span>
           </div>
@@ -352,8 +352,8 @@ export function BentoGrid() {
               )}
               {/* Central Donut Badge */}
               <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                <span className="text-[11px] font-bold font-mono text-[var(--color-text-primary)] leading-none">25</span>
-                <span className="text-[8px] font-mono text-[var(--color-text-muted)] leading-none mt-0.5">SLOTS</span>
+                <span className="text-xs font-bold font-mono text-[var(--color-text-primary)] leading-none">25</span>
+                <span className="text-xs font-mono text-[var(--color-text-muted)] leading-none mt-0.5">SLOTS</span>
               </div>
             </div>
 
@@ -362,28 +362,28 @@ export function BentoGrid() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-1.5">
                   <div className="h-2 w-2 rounded-full bg-emerald-500" />
-                  <span className="text-[11px] text-[var(--color-text-secondary)]">Active (12)</span>
+                  <span className="text-xs text-[var(--color-text-secondary)]">Active (12)</span>
                 </div>
-                <span className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400">48%</span>
+                <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400">48%</span>
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-1.5">
                   <div className="h-2 w-2 rounded-full bg-indigo-500" />
-                  <span className="text-[11px] text-[var(--color-text-secondary)]">Reserved (8)</span>
+                  <span className="text-xs text-[var(--color-text-secondary)]">Reserved (8)</span>
                 </div>
-                <span className="text-[11px] font-bold text-indigo-600 dark:text-indigo-400">32%</span>
+                <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400">32%</span>
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-1.5">
                   <div className="h-2 w-2 rounded-full bg-slate-400" />
-                  <span className="text-[11px] text-[var(--color-text-secondary)]">Spare (5)</span>
+                  <span className="text-xs text-[var(--color-text-secondary)]">Spare (5)</span>
                 </div>
-                <span className="text-[11px] font-bold text-slate-500">20%</span>
+                <span className="text-xs font-bold text-slate-500">20%</span>
               </div>
             </div>
           </div>
 
-          <div className="mt-2 pt-2 border-t border-[var(--color-border)] flex items-center justify-between text-[11px] font-mono text-[var(--color-text-muted)]">
+          <div className="mt-2 pt-2 border-t border-[var(--color-border)] flex items-center justify-between text-xs font-mono text-[var(--color-text-muted)]">
             <span>Pooler: PgBouncer</span>
             <span>Wait Queue: 0ms</span>
             <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Zero Spikes</span>
@@ -469,7 +469,7 @@ export function BentoGrid() {
             )}
           </div>
 
-          <div className="mt-2 pt-2 border-t border-[var(--color-border)] flex items-center justify-between text-[11px] font-mono text-[var(--color-text-muted)]">
+          <div className="mt-2 pt-2 border-t border-[var(--color-border)] flex items-center justify-between text-xs font-mono text-[var(--color-text-muted)]">
             <span className="text-purple-600 dark:text-purple-400 font-semibold">― XFetch (99.4%)</span>
             <span className="text-rose-500">··· TTL Cliff (0%)</span>
             <span>Beta: 1.0</span>
@@ -526,7 +526,7 @@ export function BentoGrid() {
                           <div className="flex items-center gap-2 font-mono text-xs">
                             <span className="font-bold">{item.payload.provider}:</span>
                             <span className="text-emerald-500 font-semibold">{item.payload.latency}ms</span>
-                            <span className="text-slate-400 text-[10px]">({item.payload.share} traffic)</span>
+                            <span className="text-[var(--color-text-secondary)] text-xs">({item.payload.share} traffic)</span>
                           </div>
                         )}
                       />
@@ -544,7 +544,7 @@ export function BentoGrid() {
             )}
           </div>
 
-          <div className="mt-2 pt-2 border-t border-[var(--color-border)] flex items-center justify-between text-[11px] font-mono text-[var(--color-text-muted)]">
+          <div className="mt-2 pt-2 border-t border-[var(--color-border)] flex items-center justify-between text-xs font-mono text-[var(--color-text-muted)]">
             <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Gemini 2.5: 92.4%</span>
             <span>GPT-4o-mini: 7.2%</span>
             <span>Cache: 0.4%</span>
@@ -598,7 +598,7 @@ export function BentoGrid() {
                           <div className="flex items-center gap-2 font-mono text-xs">
                             <span className="font-bold">{item.payload.stage}:</span>
                             <span className="text-emerald-500 font-semibold">{item.payload.duration}s</span>
-                            <span className="text-emerald-600 font-medium text-[10px]">PASSED</span>
+                            <span className="text-emerald-600 font-medium text-xs">PASSED</span>
                           </div>
                         )}
                       />
@@ -616,7 +616,7 @@ export function BentoGrid() {
             )}
           </div>
 
-          <div className="mt-2 pt-2 border-t border-[var(--color-border)] flex items-center justify-between text-[11px] font-mono text-[var(--color-text-muted)]">
+          <div className="mt-2 pt-2 border-t border-[var(--color-border)] flex items-center justify-between text-xs font-mono text-[var(--color-text-muted)]">
             <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Dry-Run: Verified</span>
             <span>TypeScript: 0 Errors</span>
             <span className="text-cyan-600 dark:text-cyan-400">Deploy: 3.4s</span>

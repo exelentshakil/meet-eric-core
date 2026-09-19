@@ -131,7 +131,7 @@ export function IntegrationHub() {
               Stripe • HubSpot • PostHog • Slack
             </span>
           </div>
-          <h2 className="text-lg sm:text-xl font-extrabold tracking-tight text-[var(--color-text-primary)]">
+          <h2 className="text-lg sm:text-xl font-semibold tracking-tight text-[var(--color-text-primary)]">
             Integrations, Webhooks &amp; OAuth Token Reliability
           </h2>
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] mt-1 max-w-3xl leading-relaxed">
@@ -168,17 +168,17 @@ export function IntegrationHub() {
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--color-panel-subtle)] border border-[var(--color-border)]">
                   <Icon className="h-4 w-4 text-[var(--color-text-primary)]" />
                 </div>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 font-bold">
+                <span className="text-xs font-mono px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 font-bold">
                   {svc.status}
                 </span>
               </div>
               <div className="font-bold text-xs text-[var(--color-text-primary)]">
                 {svc.name}
               </div>
-              <div className="text-[11px] font-mono text-[var(--color-text-secondary)] mt-1">
+              <div className="text-xs font-mono text-[var(--color-text-secondary)] mt-1">
                 Uptime: <span className="font-semibold text-emerald-600 dark:text-emerald-400">{svc.healthScore}</span>
               </div>
-              <div className="text-[10px] font-mono text-[var(--color-text-muted)] mt-0.5">
+              <div className="text-xs font-mono text-[var(--color-text-muted)] mt-0.5">
                 {svc.recentEventsCount.toLocaleString()} events processed
               </div>
             </button>
@@ -193,7 +193,7 @@ export function IntegrationHub() {
             <span className="text-xs font-mono font-bold uppercase text-[var(--color-text-muted)]">
               Subsystem Guardrails for:
             </span>
-            <span className="text-sm font-extrabold text-[var(--color-text-primary)] ml-2">
+            <span className="text-sm font-semibold text-[var(--color-text-primary)] ml-2">
               {active.name} [{active.category}]
             </span>
           </div>
@@ -205,7 +205,7 @@ export function IntegrationHub() {
         {/* Specifications Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
           <div className="rounded-lg p-3 bg-[var(--color-surface)] border border-[var(--color-border)]">
-            <div className="text-[10px] font-mono font-bold uppercase text-[var(--color-text-muted)] mb-1">
+            <div className="text-xs font-mono font-bold uppercase text-[var(--color-text-muted)] mb-1">
               Idempotency Engine
             </div>
             <div className="font-semibold text-[var(--color-text-primary)]">
@@ -214,7 +214,7 @@ export function IntegrationHub() {
           </div>
 
           <div className="rounded-lg p-3 bg-[var(--color-surface)] border border-[var(--color-border)]">
-            <div className="text-[10px] font-mono font-bold uppercase text-[var(--color-text-muted)] mb-1">
+            <div className="text-xs font-mono font-bold uppercase text-[var(--color-text-muted)] mb-1">
               Token Lifecycle Policy
             </div>
             <div className="font-semibold text-[var(--color-text-primary)]">
@@ -223,7 +223,7 @@ export function IntegrationHub() {
           </div>
 
           <div className="rounded-lg p-3 bg-[var(--color-surface)] border border-[var(--color-border)]">
-            <div className="text-[10px] font-mono font-bold uppercase text-[var(--color-text-muted)] mb-1">
+            <div className="text-xs font-mono font-bold uppercase text-[var(--color-text-muted)] mb-1">
               Webhook Cryptographic Auth
             </div>
             <div className="font-semibold text-[var(--color-text-primary)]">
@@ -292,7 +292,7 @@ export function IntegrationHub() {
                 {testOutput.status === 'warn' && <ShieldCheck className="h-4 w-4 text-amber-600 dark:text-amber-400" />}
                 <span>{testOutput.message}</span>
               </div>
-              <p className="text-[var(--color-text-secondary)] font-mono leading-relaxed text-[11px]">
+              <p className="text-[var(--color-text-secondary)] font-mono leading-relaxed text-xs">
                 {testOutput.details}
               </p>
             </div>

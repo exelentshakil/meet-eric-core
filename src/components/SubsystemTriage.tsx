@@ -274,7 +274,7 @@ export async function POST(req: Request) {
               Keep • Harden • Refactor • Replace
             </span>
           </div>
-          <h2 className="text-lg sm:text-xl font-extrabold tracking-tight text-[var(--color-text-primary)]">
+          <h2 className="text-lg sm:text-xl font-semibold tracking-tight text-[var(--color-text-primary)]">
             Meet Eric Subsystem Triage & Shipping Strategy
           </h2>
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] mt-1 max-w-3xl leading-relaxed">
@@ -329,7 +329,7 @@ export async function POST(req: Request) {
                       <span className="font-bold text-sm text-[var(--color-text-primary)]">
                         {item.name}
                       </span>
-                      <span className="text-[11px] font-mono text-[var(--color-text-muted)]">
+                      <span className="text-xs font-mono text-[var(--color-text-muted)]">
                         [{item.category}]
                       </span>
                     </div>
@@ -340,7 +340,7 @@ export async function POST(req: Request) {
                 </div>
 
                 <div className="flex items-center gap-2.5 shrink-0 self-end sm:self-center">
-                  <span className={`px-2.5 py-0.5 text-[11px] font-mono font-bold rounded-md border ${getDecisionBadge(item.decision)}`}>
+                  <span className={`px-2.5 py-0.5 text-xs font-mono font-bold rounded-md border ${getDecisionBadge(item.decision)}`}>
                     {item.decision}
                   </span>
                   <div className="flex items-center text-xs font-semibold text-[var(--color-text-muted)]">
@@ -355,25 +355,25 @@ export async function POST(req: Request) {
                   {/* Analysis Grid */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
                     <div className="rounded-lg p-3 bg-[var(--color-panel-subtle)] border border-[var(--color-border)]">
-                      <div className="text-[11px] font-mono font-bold uppercase text-red-600 dark:text-red-400 mb-1">
+                      <div className="text-xs font-mono font-bold uppercase text-red-600 dark:text-red-400 mb-1">
                         Current MVP Bottleneck / Risk
                       </div>
                       <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
                         {item.currentMvpState}
                       </p>
-                      <div className="mt-2 text-[10px] font-mono text-[var(--color-text-muted)]">
+                      <div className="mt-2 text-xs font-mono text-[var(--color-text-muted)]">
                         Surface: {item.affectedSurface}
                       </div>
                     </div>
 
                     <div className="rounded-lg p-3 bg-[var(--color-panel-subtle)] border border-[var(--color-border)]">
-                      <div className="text-[11px] font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400 mb-1">
+                      <div className="text-xs font-mono font-bold uppercase text-emerald-600 dark:text-emerald-400 mb-1">
                         Production Engineering Standard
                       </div>
                       <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
                         {item.productionStandard}
                       </p>
-                      <div className="mt-2 text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">
+                      <div className="mt-2 text-xs font-mono text-emerald-600 dark:text-emerald-400 font-semibold">
                         Status: {item.verifiedStatus}
                       </div>
                     </div>
@@ -388,16 +388,16 @@ export async function POST(req: Request) {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                       {/* Before */}
-                      <div className="rounded-lg border border-red-200 dark:border-red-950/60 bg-red-50/20 dark:bg-red-950/10 p-3 font-mono text-[11px] overflow-x-auto text-red-950 dark:text-red-200">
-                        <div className="text-[10px] font-bold text-red-600 dark:text-red-400 mb-1.5 uppercase">
+                      <div className="rounded-lg border border-red-200 dark:border-red-950/60 bg-red-50/20 dark:bg-red-950/10 p-3 font-mono text-xs overflow-x-auto text-red-950 dark:text-red-200">
+                        <div className="text-xs font-bold text-red-600 dark:text-red-400 mb-1.5 uppercase">
                           // MVP Initial Approach
                         </div>
                         <pre className="whitespace-pre">{item.beforeCodeSnippet}</pre>
                       </div>
 
                       {/* After */}
-                      <div className="rounded-lg border border-emerald-200 dark:border-emerald-950/60 bg-emerald-50/20 dark:bg-emerald-950/10 p-3 font-mono text-[11px] overflow-x-auto text-emerald-950 dark:text-emerald-200">
-                        <div className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 mb-1.5 uppercase">
+                      <div className="rounded-lg border border-emerald-200 dark:border-emerald-950/60 bg-emerald-50/20 dark:bg-emerald-950/10 p-3 font-mono text-xs overflow-x-auto text-emerald-950 dark:text-emerald-200">
+                        <div className="text-xs font-bold text-emerald-600 dark:text-emerald-400 mb-1.5 uppercase">
                           // Production Hardened Architecture
                         </div>
                         <pre className="whitespace-pre">{item.afterCodeSnippet}</pre>
