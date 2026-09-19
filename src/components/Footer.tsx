@@ -53,10 +53,10 @@ export function Footer() {
               <div className="pt-2.5 border-t border-[var(--color-border)] flex items-center justify-between gap-2 text-xs font-mono">
                 <div className="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 font-medium whitespace-nowrap min-w-0">
                   <span className="h-2 w-2 rounded-full bg-blue-500 animate-pulse shrink-0"></span>
-                  <span className="text-xs font-semibold truncate">Target SLA: 99.99%</span>
+                  <span className="text-xs font-semibold">Target SLA: 99.99%</span>
                 </div>
                 <span className="inline-flex items-center rounded-md bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 text-xs font-mono font-semibold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 whitespace-nowrap shrink-0">
-                  30 Beta Clients Ready
+                  30 Beta Ready
                 </span>
               </div>
             </div>
@@ -100,7 +100,7 @@ export function Footer() {
               {/* Compliance & SLA Verification Strip */}
               <div className="pt-2.5 border-t border-[var(--color-border)] flex items-center justify-between gap-2 text-xs font-mono">
                 <span className="text-xs text-[var(--color-text-muted)] font-medium truncate">
-                  NIST AI RMF 100-1 &amp; OWASP LLM01-10
+                  NIST AI RMF • OWASP
                 </span>
                 <span className="inline-flex items-center gap-1 rounded-md bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 text-xs font-bold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 whitespace-nowrap shrink-0">
                   Kernel RLS Active
@@ -135,7 +135,7 @@ export function Footer() {
                       </span>
                     </div>
                     <p className="text-xs text-[var(--color-text-muted)] font-mono truncate">
-                      Principal Systems Architect &amp; Founder
+                      Principal Systems Architect • Cert #14B411BCE
                     </p>
                   </div>
                 </div>
@@ -145,10 +145,10 @@ export function Footer() {
               </div>
 
               {/* Certified Architect Verification Bar */}
-              <div className="pt-2.5 border-t border-[var(--color-border)] flex items-center justify-between gap-1.5 text-xs font-mono">
-                <div className="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 font-medium min-w-0">
+              <div className="pt-2.5 border-t border-[var(--color-border)] flex items-center justify-between gap-2 text-xs font-mono">
+                <div className="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 font-medium whitespace-nowrap min-w-0">
                   <CheckCircle2 className="h-3.5 w-3.5 text-blue-500 shrink-0" />
-                  <span className="whitespace-nowrap shrink-0 text-xs font-semibold">Securiti Certified (Cert ID: 14B411BCE)</span>
+                  <span className="text-xs font-semibold">Securiti Certified</span>
                 </div>
                 <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 text-xs font-bold text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 whitespace-nowrap shrink-0">
                   <ShieldCheck className="h-3 w-3 text-blue-600 dark:text-blue-400" />
