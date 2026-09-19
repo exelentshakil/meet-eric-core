@@ -12,6 +12,7 @@ import {
   Activity,
   ArrowRight,
   Zap,
+  Download,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -81,6 +82,18 @@ export function ReviewerTour({ onNavigate, onOpenChaosModal }: ReviewerTourProps
         </div>
 
         <div className="flex items-center gap-2 shrink-0">
+          <a
+            href="/Meet-Eric-Architecture-Blueprint.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 h-8 px-2.5 sm:px-3 rounded-md border border-blue-200 dark:border-blue-800 bg-blue-50/80 dark:bg-blue-950/50 hover:bg-blue-100 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 text-xs font-semibold whitespace-nowrap shrink-0 shadow-2xs transition-colors"
+            title="Download 1-Page Systems Blueprint PDF"
+          >
+            <Download className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
+            <span className="hidden sm:inline">30-Day Blueprint PDF</span>
+            <span className="sm:hidden">PDF</span>
+          </a>
+
           <Button
             variant="outline"
             size="sm"
@@ -90,12 +103,12 @@ export function ReviewerTour({ onNavigate, onOpenChaosModal }: ReviewerTourProps
             {isCollapsed ? (
               <>
                 <ChevronDown className="h-3.5 w-3.5 mr-1" />
-                Expand Briefing
+                Expand
               </>
             ) : (
               <>
                 <ChevronUp className="h-3.5 w-3.5 mr-1" />
-                Collapse Briefing
+                Collapse
               </>
             )}
           </Button>
@@ -183,7 +196,7 @@ export function ReviewerTour({ onNavigate, onOpenChaosModal }: ReviewerTourProps
 
               <div className="flex flex-col items-center justify-center p-2.5 sm:px-3 sm:py-0 sm:h-9 rounded-xl sm:rounded-lg bg-gradient-to-b from-blue-950/40 to-slate-900 border border-blue-500/30 shadow-xs shrink-0 w-28 sm:w-auto text-center self-stretch sm:self-auto sm:flex-row sm:gap-2.5">
                 <div className="relative flex h-8 w-8 sm:h-6 sm:w-6 items-center justify-center rounded-lg sm:rounded-md bg-blue-500/15 text-blue-400 border border-blue-500/30 mb-1 sm:mb-0 shrink-0">
-                  <Activity className="h-4 w-4 sm:h-3.5 sm:w-3.5 text-blue-400" />
+                  <Activity className="h-4 w-4 sm:h-3.5 w-3.5 text-blue-400" />
                   <span className="absolute -top-0.5 -right-0.5 flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>

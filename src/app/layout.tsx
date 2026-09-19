@@ -5,6 +5,13 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 export const metadata: Metadata = {
   title: 'Meet Eric • AI Head of Growth (Production Architecture Cockpit)',
   description: 'Production-grade enterprise full-stack cockpit for Meet Eric. Supabase multi-tenant RLS, 8-stage safe AI agent execution loop, Stripe/HubSpot webhooks, and zero customer data leaks.',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export default function RootLayout({
@@ -16,7 +23,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="apple-touch-icon" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         {/* Preload primary Söhne & Söhne Mono font cuts for zero layout shift (CLS 0.00) */}
         <link rel="preload" href="/sohne-font-family/TestSohne-Buch-BF663d89cd32e6a.otf" as="font" type="font/otf" crossOrigin="anonymous" />
         <link rel="preload" href="/sohne-font-family/TestSohne-Kraftig-BF663d89cd37e26.otf" as="font" type="font/otf" crossOrigin="anonymous" />

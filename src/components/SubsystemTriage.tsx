@@ -300,6 +300,59 @@ export async function POST(req: Request) {
         </div>
       </div>
 
+      {/* Lovable MVP Rapid Triage & Shipping Velocity Engine */}
+      <div className="mt-5 rounded-xl border border-blue-200 dark:border-blue-900/60 bg-blue-50/40 dark:bg-blue-950/20 p-4 space-y-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-blue-200/60 dark:border-blue-900/40 pb-2.5">
+          <div className="flex items-center gap-2">
+            <span className="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse" />
+            <span className="font-mono text-xs font-bold text-blue-900 dark:text-blue-300 uppercase tracking-wider">
+              Lovable MVP Triage Plan • 30 Beta Users &amp; Exhibition Ready
+            </span>
+          </div>
+          <span className="text-xs font-mono font-semibold text-blue-700 dark:text-blue-400">
+            Total Velocity: 18 Focused Hours (2-Week Sprint @ $80/hr)
+          </span>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+          <div className="rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] p-2.5 space-y-1 shadow-2xs">
+            <div className="flex items-center justify-between">
+              <span className="font-mono font-bold text-emerald-700 dark:text-emerald-400">KEEP IT</span>
+              <span className="font-mono text-xs text-[var(--color-text-muted)]">0 hrs</span>
+            </div>
+            <div className="font-semibold text-[var(--color-text-primary)]">4 UI Subsystems</div>
+            <p className="text-xs text-[var(--color-text-muted)] leading-tight">100% Lovable UI &amp; component state preserved without disruption.</p>
+          </div>
+
+          <div className="rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] p-2.5 space-y-1 shadow-2xs">
+            <div className="flex items-center justify-between">
+              <span className="font-mono font-bold text-amber-700 dark:text-amber-400">HARDEN IT</span>
+              <span className="font-mono text-xs text-[var(--color-text-muted)]">6 hrs</span>
+            </div>
+            <div className="font-semibold text-[var(--color-text-primary)]">RLS &amp; OAuth Vault</div>
+            <p className="text-xs text-[var(--color-text-muted)] leading-tight">Multi-tenant app.current_org_id() + AES-256 proactive token refresh.</p>
+          </div>
+
+          <div className="rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] p-2.5 space-y-1 shadow-2xs">
+            <div className="flex items-center justify-between">
+              <span className="font-mono font-bold text-blue-700 dark:text-blue-400">REFACTOR IT</span>
+              <span className="font-mono text-xs text-[var(--color-text-muted)]">8 hrs</span>
+            </div>
+            <div className="font-semibold text-[var(--color-text-primary)]">Agent &amp; Webhooks</div>
+            <p className="text-xs text-[var(--color-text-muted)] leading-tight">8-stage execution loop + Inngest durable queue with advisory locks.</p>
+          </div>
+
+          <div className="rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] p-2.5 space-y-1 shadow-2xs">
+            <div className="flex items-center justify-between">
+              <span className="font-mono font-bold text-purple-700 dark:text-purple-400">REPLACE IT</span>
+              <span className="font-mono text-xs text-[var(--color-text-muted)]">4 hrs</span>
+            </div>
+            <div className="font-semibold text-[var(--color-text-primary)]">Fragile Cron Workers</div>
+            <p className="text-xs text-[var(--color-text-muted)] leading-tight">Replace serverless timeout promises with durable scheduled workflows.</p>
+          </div>
+        </div>
+      </div>
+
       {/* Subsystems Table / Cards */}
       <div className="mt-5 space-y-3">
         {filteredSubsystems.map((item) => {

@@ -1,24 +1,25 @@
 'use client';
 
 import React from 'react';
-import { useTheme } from 'next-themes';
 import {
-  Activity,
   Layers,
   Bot,
   Webhook,
   ShieldCheck,
+  Activity,
   Calculator,
   Download,
-  Terminal,
+  Search,
+  SlidersHorizontal,
   Sun,
   Moon,
-  Zap,
-  ChevronDown,
-  Search,
   CheckCircle2,
-  SlidersHorizontal,
+  ChevronDown,
+  Terminal,
+  Zap,
+  Sparkles,
 } from 'lucide-react';
+import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -88,35 +89,37 @@ export function Header({
             </div>
           </button>
 
-          {/* Hairline Structural Divider */}
-          <div className="hidden lg:block h-4 w-px bg-[var(--color-border)] mx-1 shrink-0" />
+          {/* Hairline Divider */}
+          <div className="hidden md:block h-4 w-px bg-[var(--color-border)] select-none shrink-0" />
 
-          {/* Primary Navigation */}
-          <nav className="hidden lg:flex items-center gap-1 shrink-0">
+          {/* Inlined Primary Navigation for Quick 1-Click Access */}
+          <nav className="hidden md:flex items-center gap-1 shrink-0">
             {primaryNavItems.map((item) => {
+              const Icon = item.icon;
               const isActive = activeSection === item.id;
               return (
                 <button
                   key={item.id}
                   onClick={() => onNavigate(item.id)}
-                  className={`px-2.5 h-8 inline-flex items-center text-[13px] font-medium rounded-md transition-colors whitespace-nowrap shrink-0 ${
+                  className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium transition-all shrink-0 ${
                     isActive
-                      ? 'bg-[var(--color-panel-subtle)] text-[var(--color-text-primary)] font-semibold shadow-2xs border border-[var(--color-border)]'
+                      ? 'border border-[var(--color-border)] bg-[var(--color-panel-subtle)] text-[var(--color-text-primary)] font-semibold shadow-2xs'
                       : 'border border-transparent text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-panel-subtle)]/70'
                   }`}
                 >
-                  {item.label}
+                  <Icon className={`h-3.5 w-3.5 shrink-0 ${isActive ? 'text-blue-600 dark:text-blue-400' : 'text-[var(--color-text-muted)]'}`} />
+                  <span className="whitespace-nowrap">{item.label}</span>
                 </button>
               );
             })}
 
-            {/* Sleek "More" Dropdown Menu */}
+            {/* "More" Dropdown Menu */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button
-                  className={`inline-flex items-center gap-1 px-2.5 h-8 text-[13px] font-medium rounded-md transition-colors whitespace-nowrap shrink-0 ${
+                  className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-all shrink-0 ${
                     isSecondaryActive
-                      ? 'bg-[var(--color-panel-subtle)] text-[var(--color-text-primary)] font-semibold shadow-2xs border border-[var(--color-border)]'
+                      ? 'border border-[var(--color-border)] bg-[var(--color-panel-subtle)] text-[var(--color-text-primary)] font-semibold shadow-2xs'
                       : 'border border-transparent text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-panel-subtle)]/70'
                   }`}
                 >
@@ -155,8 +158,21 @@ export function Header({
           </nav>
         </div>
 
-        {/* Right Cluster: Quick Search + Diagnostics + CTA + Theme */}
+        {/* Right Cluster: PDF Blueprint + Quick Search + Diagnostics + Theme */}
         <div className="flex items-center gap-2 sm:gap-2.5 shrink-0 ml-4 lg:ml-6">
+          {/* 1-Click PDF Architecture Blueprint Download */}
+          <a
+            href="/Meet-Eric-Architecture-Blueprint.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 h-8 px-2.5 sm:px-3 rounded-md border border-blue-200 dark:border-blue-800/80 bg-blue-50/90 dark:bg-blue-950/60 hover:bg-blue-100 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 text-xs font-semibold shadow-2xs transition-colors whitespace-nowrap shrink-0"
+            title="Open 1-Page Systems Blueprint PDF (Ref #BS-2026-ERIC)"
+          >
+            <Download className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
+            <span className="hidden sm:inline">30-Day Blueprint (PDF)</span>
+            <span className="sm:hidden">Blueprint PDF</span>
+          </a>
+
           {/* Quick Search ⌘K Button */}
           <button
             onClick={onOpenCommandMenu}

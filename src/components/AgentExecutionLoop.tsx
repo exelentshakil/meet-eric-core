@@ -378,65 +378,111 @@ export function AgentExecutionLoop() {
             </div>
           )}
 
-          {/* Stage 5: Human-in-the-Loop Slack Card Simulator */}
+          {/* Stage 5: Authentic Slack Block Kit Simulator */}
           {currentStage >= 5 && analysisResult && (
             <div className="pt-3 border-t border-[var(--color-border)]">
-              <div className="text-xs font-mono font-bold uppercase text-amber-600 dark:text-amber-400 mb-2">
-                Stage 5 • Slack Human-in-the-Loop Approval Checkpoint
+              <div className="flex items-center justify-between mb-2">
+                <div className="text-xs font-mono font-bold uppercase text-amber-600 dark:text-amber-400">
+                  Stage 5 • Slack Human-in-the-Loop Approval Checkpoint
+                </div>
+                <span className="text-xs font-mono text-[var(--color-text-muted)] hidden sm:inline">
+                  Interactive Block Kit UI • HMAC-SHA256 Verified
+                </span>
               </div>
 
-              <div className="rounded-xl border border-amber-300 dark:border-amber-900/60 bg-amber-50/30 dark:bg-amber-950/20 p-4 space-y-3">
-                <div className="flex items-start justify-between gap-3">
-                  <div className="flex items-center gap-2">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-600 text-white font-bold text-xs">
-                      E
-                    </div>
-                    <div>
-                      <span className="font-bold text-xs text-[var(--color-text-primary)]">Eric (AI Head of Growth)</span>
-                      <span className="text-xs font-mono text-[var(--color-text-muted)] ml-2">#growth-approvals • today at 14:02</span>
-                    </div>
+              {/* Slack Desktop/Mobile Styled Message Card */}
+              <div className="rounded-xl border border-slate-300 dark:border-slate-800 bg-[#F8F9FA] dark:bg-[#1A1D21] p-3.5 sm:p-4 space-y-3 shadow-xs">
+                {/* Channel Header Bar */}
+                <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800/80 pb-2 text-xs">
+                  <div className="flex items-center gap-1.5 font-semibold text-slate-700 dark:text-slate-300">
+                    <span className="text-slate-400 font-mono">#</span>
+                    <span>growth-approvals</span>
+                    <span className="text-xs font-normal text-slate-500 ml-1.5 hidden sm:inline">30 beta workspace alerts</span>
                   </div>
-                  <span className="text-xs font-mono px-2 py-0.5 rounded-md bg-amber-100 dark:bg-amber-900/60 text-amber-900 dark:text-amber-300 font-semibold">
-                    AWAITING HUMAN CONFIRMATION
+                  <span className="text-xs font-mono text-slate-400">
+                    Today at 14:04 • Channel ID: C08BETA92
                   </span>
                 </div>
 
-                <p className="text-xs text-[var(--color-text-primary)] leading-relaxed">
-                  {analysisResult.approvalSummary}
-                </p>
+                {/* Bot Identity & Message Lockup */}
+                <div className="flex items-start gap-3">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-indigo-700 text-white font-bold text-sm shadow-xs shrink-0">
+                    E
+                  </div>
+                  <div className="space-y-2 min-w-0 flex-1">
+                    <div className="flex items-center gap-2">
+                      <span className="font-bold text-sm text-slate-900 dark:text-slate-100">Eric</span>
+                      <span className="rounded bg-slate-200 dark:bg-slate-800 px-1.5 py-0.2 text-xs font-mono font-bold text-slate-600 dark:text-slate-400 uppercase">
+                        APP
+                      </span>
+                      <span className="text-xs text-slate-400 font-mono">14:04</span>
+                    </div>
 
-                <div className="rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] p-2.5 text-xs font-mono text-[var(--color-text-secondary)]">
-                  Execution Payload: {JSON.stringify(analysisResult.executionPayload)}
+                    {/* Slack Block Kit Message Body */}
+                    <div className="rounded-lg bg-white dark:bg-[#222529] border border-slate-200 dark:border-slate-800 p-3 sm:p-4 space-y-2.5 text-xs text-slate-800 dark:text-slate-200 shadow-2xs">
+                      <div className="font-semibold text-sm text-slate-900 dark:text-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-1.5">
+                        <span className="truncate">{activeScenario.title}</span>
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-300 font-mono text-xs font-bold border border-amber-300 dark:border-amber-800 whitespace-nowrap shrink-0 w-fit">
+                          AWAITING SLACK APPROVAL
+                        </span>
+                      </div>
+
+                      <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+                        {analysisResult.approvalSummary}
+                      </p>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 font-mono text-xs">
+                        <div className="p-2 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                          <span className="text-slate-500 block text-xs">Recommended Tool</span>
+                          <span className="font-bold text-blue-600 dark:text-blue-400">{analysisResult.recommendedTool}()</span>
+                        </div>
+                        <div className="p-2 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                          <span className="text-slate-500 block text-xs">Estimated Impact</span>
+                          <span className="font-bold text-emerald-600 dark:text-emerald-400">{analysisResult.metricsImpact}</span>
+                        </div>
+                      </div>
+
+                      <div className="p-2.5 rounded bg-slate-900 text-slate-200 font-mono text-xs overflow-x-auto">
+                        <div className="text-slate-400 text-xs uppercase mb-1">Inngest Execution Payload:</div>
+                        <code>{JSON.stringify(analysisResult.executionPayload)}</code>
+                      </div>
+
+                      {/* Slack Action Buttons */}
+                      {humanApprovalState === 'pending' ? (
+                        <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-200 dark:border-slate-800">
+                          <Button
+                            size="sm"
+                            onClick={handleApproveAction}
+                            className="h-8 text-xs font-semibold bg-[#007A5A] hover:bg-[#148567] text-white px-3.5 rounded-md shadow-xs whitespace-nowrap shrink-0"
+                          >
+                            <CheckCircle2 className="h-3.5 w-3.5 mr-1.5" />
+                            Approve in Slack (Execute Tool)
+                          </Button>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={handleRejectAction}
+                            className="h-8 text-xs font-semibold border-slate-300 dark:border-slate-700 text-[#E01E5A] hover:bg-red-50 dark:hover:bg-red-950/30 px-3.5 rounded-md shadow-xs whitespace-nowrap shrink-0"
+                          >
+                            Reject Action
+                          </Button>
+                          <span className="text-xs font-mono text-slate-500 ml-auto hidden md:inline">
+                            POST /api/slack/interactions → 200 OK
+                          </span>
+                        </div>
+                      ) : humanApprovalState === 'approved' ? (
+                        <div className="pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center gap-2 text-xs font-bold text-emerald-600 dark:text-emerald-400 font-mono">
+                          <CheckCircle2 className="h-4 w-4 shrink-0" />
+                          <span>Slack Action Approved by Paul (@paul • Founder). Dispatched to Inngest Queue.</span>
+                        </div>
+                      ) : (
+                        <div className="pt-2 border-t border-slate-200 dark:border-slate-800 text-xs font-bold text-red-600 dark:text-red-400 font-mono">
+                          ✕ Intervention rejected in Slack. Autonomous loop halted safely with zero mutations.
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
-
-                {humanApprovalState === 'pending' ? (
-                  <div className="flex items-center gap-2.5 pt-1">
-                    <Button
-                      size="sm"
-                      onClick={handleApproveAction}
-                      className="h-8 text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white px-3.5 shadow-xs"
-                    >
-                      <CheckCircle2 className="h-3.5 w-3.5 mr-1.5" />
-                      Approve &amp; Execute Action
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={handleRejectAction}
-                      className="h-8 text-xs font-semibold border-[var(--color-border)] hover:bg-red-50 hover:text-red-600 px-3.5 shadow-xs"
-                    >
-                      Reject Action
-                    </Button>
-                  </div>
-                ) : humanApprovalState === 'approved' ? (
-                  <div className="text-xs font-bold text-emerald-600 dark:text-emerald-400 font-mono">
-                    ✓ Human Approval Granted by Growth Lead. Proceeding to Execution.
-                  </div>
-                ) : (
-                  <div className="text-xs font-bold text-red-600 dark:text-red-400 font-mono">
-                    ✕ Action rejected by reviewer. Execution cancelled.
-                  </div>
-                )}
               </div>
             </div>
           )}
