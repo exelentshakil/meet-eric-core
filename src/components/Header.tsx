@@ -8,7 +8,7 @@ import {
   ShieldCheck,
   Activity,
   Calculator,
-  Download,
+  Code2,
   Search,
   SlidersHorizontal,
   Sun,
@@ -16,7 +16,6 @@ import {
   ChevronDown,
   Terminal,
   Zap,
-  Sparkles,
 } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
@@ -59,8 +58,8 @@ export function Header({
   // Secondary navigation anchors in sleek "More" dropdown
   const secondaryNavItems = [
     { id: 'roi', label: 'Infrastructure & ROI', icon: Calculator, desc: 'Supabase compute & token micro-costs' },
-    { id: 'blueprints', label: '30-Day Shipping Blueprint', icon: Download, desc: 'Turnkey architectural migrations & code' },
-    { id: 'briefing', label: 'Executive Briefing', icon: Zap, desc: 'Context for 30 beta users & exhibition' },
+    { id: 'blueprints', label: 'Production Blueprints', icon: Code2, desc: 'Turnkey architectural migrations & code' },
+    { id: 'briefing', label: 'Executive Briefing', icon: Zap, desc: 'Architecture overview & evaluation paths' },
   ];
 
   // Complete list for mobile & tablet horizontal pill bar (with icons)
@@ -72,7 +71,7 @@ export function Header({
     { id: 'security', label: 'Security & RLS', icon: ShieldCheck },
     { id: 'telemetry', label: 'Observability', icon: Activity },
     { id: 'roi', label: 'ROI & Costs', icon: Calculator },
-    { id: 'blueprints', label: 'Blueprint', icon: Download },
+    { id: 'blueprints', label: 'Blueprints', icon: Code2 },
   ];
 
   const isSecondaryActive = secondaryNavItems.some((item) => item.id === activeSection);
@@ -96,7 +95,7 @@ export function Header({
                 Meet Eric
               </span>
               <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-blue-50 dark:bg-blue-950/40 text-blue-800 dark:text-blue-300 border border-blue-200 dark:border-blue-800 font-mono hidden sm:inline-block whitespace-nowrap">
-                30 Beta Ready
+                Production Cockpit
               </span>
             </div>
           </button>
@@ -168,21 +167,8 @@ export function Header({
           </nav>
         </div>
 
-        {/* Right Cluster: PDF Blueprint + Quick Search + Diagnostics + Theme */}
+        {/* Right Cluster: Quick Search + Diagnostics + Chaos CTA + Theme */}
         <div className="flex items-center gap-2 sm:gap-2.5 shrink-0 ml-4 lg:ml-6">
-          {/* 1-Click PDF Architecture Blueprint Download */}
-          <a
-            href="/Meet-Eric-Architecture-Blueprint.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 h-8 px-2.5 sm:px-3 rounded-md border border-blue-200 dark:border-blue-800/80 bg-blue-50/90 dark:bg-blue-950/60 hover:bg-blue-100 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 text-xs font-semibold shadow-2xs transition-colors whitespace-nowrap shrink-0"
-            title="Open 1-Page Systems Blueprint PDF (Ref #BS-2026-ERIC)"
-          >
-            <Download className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
-            <span className="hidden sm:inline">30-Day Blueprint (PDF)</span>
-            <span className="sm:hidden text-xs font-semibold">PDF</span>
-          </a>
-
           {/* Quick Search ⌘K Button */}
           <button
             onClick={onOpenCommandMenu}
@@ -221,7 +207,7 @@ export function Header({
                 <Zap className="h-3.5 w-3.5 text-amber-500 shrink-0" />
                 <div>
                   <div className="font-medium">Chaos Simulator</div>
-                  <div className="text-xs text-[var(--color-text-muted)]">Test network timeout &amp; 3DS failover</div>
+                  <div className="text-xs text-[var(--color-text-muted)]">Test network timeout &amp; failover</div>
                 </div>
               </DropdownMenuItem>
 
@@ -250,6 +236,17 @@ export function Header({
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+
+          {/* High-Contrast Action CTA: Chaos Outage Test */}
+          <Button
+            size="sm"
+            onClick={onOpenChaosModal}
+            className="h-8 text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white shadow-xs whitespace-nowrap shrink-0 px-2.5 sm:px-3"
+            title="Simulate upstream API outage & failover"
+          >
+            <Zap className="h-3.5 w-3.5 mr-1 text-blue-200 shrink-0" />
+            <span className="whitespace-nowrap">Chaos Test</span>
+          </Button>
 
           {/* Theme Toggle Button */}
           <Button

@@ -178,7 +178,7 @@ export function AgentExecutionLoop() {
             Eric 8-Stage Safe Autonomous Execution Runner
           </h2>
           <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] mt-1 max-w-3xl leading-relaxed">
-            Paul’s Core Requirement: Eric safely reads data → investigates → chooses a tool → checks permissions → requests human approval → executes with idempotency → verifies outcome → logs cryptographic audit trail.
+            Autonomous Systems Standard: Eric safely reads data → investigates → chooses a tool → checks permissions → requests human approval → executes with idempotency → verifies outcome → logs cryptographic audit trail.
           </p>
         </div>
 
@@ -473,7 +473,7 @@ export function AgentExecutionLoop() {
                       ) : humanApprovalState === 'approved' ? (
                         <div className="pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center gap-2 text-xs font-bold text-emerald-600 dark:text-emerald-400 font-mono">
                           <CheckCircle2 className="h-4 w-4 shrink-0" />
-                          <span>Slack Action Approved by Paul (@paul • Founder). Dispatched to Inngest Queue.</span>
+                          <span>Slack Action Approved by Operations Lead (@ops-lead • Admin). Dispatched to Inngest Queue.</span>
                         </div>
                       ) : (
                         <div className="pt-2 border-t border-slate-200 dark:border-slate-800 text-xs font-bold text-red-600 dark:text-red-400 font-mono">

@@ -310,7 +310,7 @@ export async function POST(req: Request) {
             </span>
           </div>
           <span className="text-xs font-mono font-semibold text-blue-700 dark:text-blue-400">
-            Total Velocity: 18 Focused Hours (2-Week Sprint @ $80/hr)
+            Rapid Stabilization Roadmap • 100% Production Ready
           </span>
         </div>
 
@@ -318,7 +318,7 @@ export async function POST(req: Request) {
           <div className="rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] p-2.5 space-y-1 shadow-2xs">
             <div className="flex items-center justify-between">
               <span className="font-mono font-bold text-emerald-700 dark:text-emerald-400">KEEP IT</span>
-              <span className="font-mono text-xs text-[var(--color-text-muted)]">0 hrs</span>
+              <span className="font-mono text-xs text-[var(--color-text-muted)]">Preserved</span>
             </div>
             <div className="font-semibold text-[var(--color-text-primary)]">4 UI Subsystems</div>
             <p className="text-xs text-[var(--color-text-muted)] leading-tight">100% Lovable UI &amp; component state preserved without disruption.</p>
@@ -327,7 +327,7 @@ export async function POST(req: Request) {
           <div className="rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] p-2.5 space-y-1 shadow-2xs">
             <div className="flex items-center justify-between">
               <span className="font-mono font-bold text-amber-700 dark:text-amber-400">HARDEN IT</span>
-              <span className="font-mono text-xs text-[var(--color-text-muted)]">6 hrs</span>
+              <span className="font-mono text-xs text-[var(--color-text-muted)]">Hardened</span>
             </div>
             <div className="font-semibold text-[var(--color-text-primary)]">RLS &amp; OAuth Vault</div>
             <p className="text-xs text-[var(--color-text-muted)] leading-tight">Multi-tenant app.current_org_id() + AES-256 proactive token refresh.</p>
@@ -336,7 +336,7 @@ export async function POST(req: Request) {
           <div className="rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] p-2.5 space-y-1 shadow-2xs">
             <div className="flex items-center justify-between">
               <span className="font-mono font-bold text-blue-700 dark:text-blue-400">REFACTOR IT</span>
-              <span className="font-mono text-xs text-[var(--color-text-muted)]">8 hrs</span>
+              <span className="font-mono text-xs text-[var(--color-text-muted)]">Refactored</span>
             </div>
             <div className="font-semibold text-[var(--color-text-primary)]">Agent &amp; Webhooks</div>
             <p className="text-xs text-[var(--color-text-muted)] leading-tight">8-stage execution loop + Inngest durable queue with advisory locks.</p>
@@ -345,7 +345,7 @@ export async function POST(req: Request) {
           <div className="rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] p-2.5 space-y-1 shadow-2xs">
             <div className="flex items-center justify-between">
               <span className="font-mono font-bold text-purple-700 dark:text-purple-400">REPLACE IT</span>
-              <span className="font-mono text-xs text-[var(--color-text-muted)]">4 hrs</span>
+              <span className="font-mono text-xs text-[var(--color-text-muted)]">Replaced</span>
             </div>
             <div className="font-semibold text-[var(--color-text-primary)]">Fragile Cron Workers</div>
             <p className="text-xs text-[var(--color-text-muted)] leading-tight">Replace serverless timeout promises with durable scheduled workflows.</p>

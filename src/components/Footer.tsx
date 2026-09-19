@@ -186,7 +186,7 @@ export function Footer() {
             </a>
             <span className="text-[var(--color-border)] select-none hidden sm:inline">•</span>
             <a href="#blueprints" className="hover:text-[var(--color-text-primary)] transition-colors whitespace-nowrap">
-              30-Day Blueprint
+              Code Blueprints
             </a>
           </nav>
         </div>

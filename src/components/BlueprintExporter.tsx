@@ -287,16 +287,6 @@ export async function processIdempotentWebhook(
 
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center gap-2 shrink-0">
-          <a
-            href="/Meet-Eric-Architecture-Blueprint.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 h-8 px-3 rounded-md bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-semibold hover:bg-blue-100 dark:hover:bg-blue-900/60 shadow-xs transition-colors whitespace-nowrap shrink-0"
-            title="Download 1-Page Systems Blueprint PDF"
-          >
-            <Download className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
-            <span>Blueprint PDF (1-Page Brief)</span>
-          </a>
           <Button
             variant="outline"
             size="sm"

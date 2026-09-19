@@ -134,7 +134,7 @@ export default function HomePage() {
             <RoiCostCalculator />
           </section>
 
-          {/* 30-Day Blueprints */}
+          {/* Production Code Blueprints */}
           <section id="blueprints" className="scroll-mt-28 md:scroll-mt-20">
             <BlueprintExporter />
           </section>

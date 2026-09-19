@@ -95,7 +95,7 @@ export function CommandMenu({
                 { id: 'security', label: 'Multi-Tenant Supabase RLS & Tool Defense', icon: ShieldCheck },
                 { id: 'telemetry', label: 'Micro-Observability & Telemetry Bento', icon: Workflow },
                 { id: 'roi', label: 'Infrastructure & Token Cost Calculator', icon: Calculator },
-                { id: 'blueprints', label: '30-Day Ship Blueprint & Code Exports', icon: FileJson },
+                { id: 'blueprints', label: 'Production Code & Migration Blueprints', icon: FileJson },
               ].map((item) => {
                 const Icon = item.icon;
                 return (

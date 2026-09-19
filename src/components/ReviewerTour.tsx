@@ -12,7 +12,6 @@ import {
   Activity,
   ArrowRight,
   Zap,
-  Download,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -37,7 +36,7 @@ export function ReviewerTour({ onNavigate, onOpenChaosModal }: ReviewerTourProps
       id: 'agent-loop',
       badge: 'Path 2 • Safe Agent Loop',
       title: '8-Stage Autonomous Runner',
-      desc: 'Test Paul’s exact loop: Read data → Investigate → Choose tool → Check permissions → Request human Slack approval → Execute → Verify → Audit.',
+      desc: 'Test the safe autonomous loop: Read data → Investigate → Choose tool → Check permissions → Request human Slack approval → Execute → Verify → Audit.',
       actionLabel: 'Run 8-Stage Loop',
       icon: Bot,
     },
@@ -67,7 +66,7 @@ export function ReviewerTour({ onNavigate, onOpenChaosModal }: ReviewerTourProps
           <div className="flex items-center gap-2 mb-1.5">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 dark:bg-blue-950/40 px-3 py-1 text-xs font-semibold text-blue-800 dark:text-blue-300 border border-blue-200 dark:border-blue-800 whitespace-nowrap shrink-0 shadow-xs">
               <Sparkles className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
-              Executive Architecture Briefing for Paul &amp; The Meet Eric Team
+              Executive Architecture Briefing • Enterprise Systems Cockpit
             </span>
             <span className="text-xs text-[var(--color-text-secondary)] font-mono font-medium hidden sm:inline">
               30 Beta Users • Exhibition Ready
@@ -82,18 +81,6 @@ export function ReviewerTour({ onNavigate, onOpenChaosModal }: ReviewerTourProps
         </div>
 
         <div className="flex items-center gap-2 shrink-0">
-          <a
-            href="/Meet-Eric-Architecture-Blueprint.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 h-8 px-2.5 sm:px-3 rounded-md border border-blue-200 dark:border-blue-800 bg-blue-50/80 dark:bg-blue-950/50 hover:bg-blue-100 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 text-xs font-semibold whitespace-nowrap shrink-0 shadow-2xs transition-colors"
-            title="Download 1-Page Systems Blueprint PDF"
-          >
-            <Download className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
-            <span className="hidden sm:inline">30-Day Blueprint PDF</span>
-            <span className="sm:hidden">PDF</span>
-          </a>
-
           <Button
             variant="outline"
             size="sm"
